@@ -1,0 +1,68 @@
+1. suschnost Installation
+
+CREATE TABLE [dbo].[Inastallation](
+	[ID] [int] NOT NULL,
+	[cost] [int] NOT NULL,
+	[instDate] [date] NOT NULL,
+	[launchTime] [datetime] NOT NULL,
+	[PurposeOfUse] [nvarchar](50) NOT NULL,
+ CONSTRAINT [PK_Inastallation] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+
+
+2. suschnost GTU
+
+CREATE TABLE [dbo].[GTU](
+	[ID] [int] NOT NULL,
+	[TYPE_GTU] [nchar](40) NOT NULL,
+	[Bloks] [int] NULL,
+	[DegreeAgregation] [nvarchar](50) NOT NULL,
+	[OptionalEquipment] [nvarchar](50) NOT NULL,
+ CONSTRAINT [PK_GTU] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+
+
+3. suschnost Foundation
+
+CREATE TABLE [dbo].[Foundation](
+	[ID] [int] NOT NULL,
+	[TypeFoundation] [nvarchar](50) NOT NULL,
+	[TheSize] [int] NOT NULL,
+	[NumBlocks] [int] NULL,
+	[NumAnchorStuds] [int] NULL,
+ CONSTRAINT [PK_Foundation] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+
+4. suschnost Cable
+
+CREATE TABLE [dbo].[Cable](
+	[ID] [int] NOT NULL,
+	[TypeCable] [nvarchar](50) NOT NULL,
+	[TypeConnection] [nvarchar](50) NOT NULL,
+	[NumConnect] [int] NOT NULL,
+	[DesignTray] [nvarchar](50) NOT NULL,
+ CONSTRAINT [PK_Cable] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
